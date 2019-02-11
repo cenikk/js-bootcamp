@@ -21,10 +21,6 @@ while (hashtagValue < 7) {
 }
 
 // Solution 2: For loop
-var hashtag = "#";
-
-var i;
-for (i = 0; i < 7; i++) {
-    console.log(hashtag);
-    hashtag += "#";
+for (let i = "#"; i.length < 8; i += "#") {
+    console.log(i);
 }
