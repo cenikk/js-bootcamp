@@ -1,6 +1,5 @@
 __Hoofdstuk 1__
 # Values, Types, And Operators
-<<<<<<< HEAD
 *Bits* zijn allerlei soorten van twee waarden, meestal beschreven als nullen en énen.
 Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
 ``` 
@@ -10,8 +9,8 @@ Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
 Dus dat is de binaire getal 00001101. De niet-nullen cijfers staan voor 8, 4 en 1, en tellen op tot 13.
 
 ## Values
-Een typische moderne computer heeft__ meer dan 30 miljard bits in zijn gegevensopslag (werkgeheugen)
-Om met zulke hoeveelheden bits te kunnen werken zonder te verdwalen, moeten we de bits scheiden in brokken
+Een typische moderne computer heeft meer dan 30 miljard bits in zijn gegevensopslag (werkgeheugen)  
+Om met zulke hoeveelheden bits   te kunnen werken zonder te verdwalen, moeten we de bits scheiden in brokken
 die stukjes informatie vormen. In JavaScript worden die brokken ook wel 'Values' genoemd. 
 Elke Value heeft een type dat de rol bepaalt, sommige zijn nummers, sommige stukjes tekst,
 sommige functies, enzovoort. Als je een Value wil maken, hoef je alleen de naam ervan te gebruiken.
