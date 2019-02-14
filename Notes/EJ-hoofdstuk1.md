@@ -1,6 +1,6 @@
 __Hoofdstuk 1__
 # Values, Types, And Operators
-*Bits* zijn allerlei soorten van twee waaren, meestal beschreven aks nullen en énen.
+*Bits* zijn allerlei soorten van twee waarden, meestal beschreven als nullen en énen.
 Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
 ``` 
     0   0   0   0   1   1   0   1
@@ -9,7 +9,7 @@ Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
 Dus dat is de binaire getal 00001101. De niet-nullen cijfers staan voor 8, 4 en 1, en tellen op tot 13.
 
 ## Values
-Een typische moderne computer heeft meer dan 30 miljard bits in zijn gegevensopslag (werkgeheugen).
+Een typische moderne computer heeft__ meer dan 30 miljard bits in zijn gegevensopslag (werkgeheugen)
 Om met zulke hoeveelheden bits te kunnen werken zonder te verdwalen, moeten we de bits scheiden in brokken
 die stukjes informatie vormen. In JavaScript worden die brokken ook wel 'Values' genoemd. 
 Elke Value heeft een type dat de rol bepaalt, sommige zijn nummers, sommige stukjes tekst,
@@ -55,7 +55,8 @@ Wanneer je iets in ${} schrijft, wordt het resultaat ervan berekend en opgenomen
 Sommige operators zijn geschreven als woorden, een voorbeeld is __typeof__, die een string value produceert
 met de naam van de value die je geeft.
 
-``` console.log(typeof 6.5)
+``` 
+console.log(typeof 6.5)
 // -> number
 
 console.log(typeof "Hello world")
@@ -66,7 +67,8 @@ operators die éen waarde gebruiken, __Unaire__ operators. (min (-) kan beide)
 
 ## Boolean Values
 Boolean types hebben slechts twee waarden, __true__ en __false__, die ook zo geschreven worden. 
-``` console.log(3 > 2)
+``` 
+console.log(3 > 2)
 // -> true
 console.log(3 < 2)
 // -> false
@@ -81,7 +83,8 @@ Andere vergelijk operators zijn:
 * __===__(identiek aan (ook hetzelfde _datatype_))
 * __!=__(niet gelijk aan)
 Er is slechts éen waarde in JS die niet gelijk is aan zichzelf en dat is `NaN` ("Not a Number").
-```console.log(Nan == Nan)
+```
+console.log(Nan == Nan)
 // -> false
 ```
 __NaN__ geeft het resultaat van een onzinnige resultaat aan, zoals: `24 - 'hello' = NaN`
@@ -94,7 +97,8 @@ Javascript ondersteunt vier Logical operators:
 3. __!__ - Niet, het draait de waarde die eraan gegeven is om.
 
 Ten slotte is er ook een Ternary operator, die werkt op drie waarden.
-``` console.log(true? 1 : 2)
+``` 
+console.log(true? 1 : 2)
 // -> 1
 console.log(false? 1: 2)
 // -> 2
