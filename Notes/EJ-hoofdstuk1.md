@@ -1,4 +1,4 @@
-**Hoofdstuk 1**
+__Hoofdstuk 1__
 #Values, Types, And Operators
 *Bits* zijn allerlei soorten van twee waaren, meestal beschreven aks nullen en énen.
 Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
