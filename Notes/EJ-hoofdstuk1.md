@@ -1,6 +1,6 @@
 __Hoofdstuk 1__
 # Values, Types, And Operators
-*Bits* zijn allerlei soorten van twee waaren, meestal beschreven aks nullen en énen.
+*Bits* zijn allerlei soorten van twee waarden, meestal beschreven aks nullen en énen.
 Bijvoorbeeld, we kunnen nummer 13 in bits uitdrukken:
 ``` 
     0   0   0   0   1   1   0   1
