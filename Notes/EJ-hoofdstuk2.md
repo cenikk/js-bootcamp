@@ -1,1 +1,1 @@
-__Deze hoofdstuk heb ik voor nu overgeslagen wegens tijdnood en omdat ik alles erin al wist__
+___Deze hoofdstuk heb ik voor nu overgeslagen wegens tijdsnood en omdat ik alles erin al snap___

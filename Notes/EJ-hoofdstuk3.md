@@ -69,3 +69,75 @@ if (safeMode) {
   launchMissiles = function() {/* do nothing */};
 }
 ```
+
+## Declaration Notation
+Er is een iets kortere manier om een functiebinding te maken. Wanneer het keyword functie wordt gebruikt aan het begin van een instructie, werkt het anders.
+```javascript
+function square(x) {
+  return x * x;
+}
+```
+Dit is een functie declaration. De instructie definieert het bindende 'square' en wijst het naar de gegeven functie. Het is iets gemakkelijker om te schrijven en vereist geen puntkomma na de functie.
+
+## Arrow functions
+Er is een derde notatie voor functies, die er heel anders uitziet dan de andere. In plaats van het functiezoekwoord gebruikt het een pijl (=>) bestaande uit een gelijkteken en een groter-dan-teken (niet te verwarren met de groter-dan-of-gelijk-operator, die zo geschreven wordt >=).
+```js
+const power = (base, exponent) => {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+};
+```
+
+## Closure
+in staat zijn om te verwijzen naar een specifiek exemplaar van een lokale binding in een insluitende scope - wordt een __Closure__ genoemd.
+Een functie die verwijst naar bindingen van lokale scopes eromheen wordt een __Closure__ genoemd.
+```js
+function wrapValue(n) {
+  let local = n;
+  return () => local;
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2;
+```
+
+## Recursion
+Het is oke voor een functie om zichzelf te noemen, zolang het maar niet zo vaak gebeurt dat het de stapel overstroomt. 
+Een functie die zichzelf aanroept, wordt __Recursive__ genoemd.
+__Recursion__ zorgt ervoor dat sommige functies in een andere stijl kunnen worden geschreven, bijvoorbeeld:
+```js
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+console.log(power(2, 3));
+// → 8
+```
+
+## Samenvatting
+In dit hoofdstuk hebt u geleerd hoe u uw eigen functies kunt schrijven. Het functiezoekwoord kan, wanneer het als een uitdrukking wordt gebruikt, een functiewaarde creëren. Als het wordt gebruikt als een statement, kan het worden gebruikt om een binding te declareren en het een functie als waarde te geven. Pijlfuncties zijn nog een andere manier om functies te creëren.
+```js
+// Define f to hold a function value
+const f = function(a) {
+  console.log(a + 2);
+};
+
+// Declare g to be a function
+function g(a, b) {
+  return a * b * 3.5;
+}
+
+// A less verbose function value
+let h = a => a % 3;
+```
