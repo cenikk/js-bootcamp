@@ -5,11 +5,11 @@ Het kernidee bij object-georiënteerd programmeren is om programma's in kleinere
 Op deze manier kan wat kennis over de manier waarop een stuk van het programma werkt, lokaal bij dat stuk worden bewaard.  
 Iemand die aan de rest van het programma werkt, hoeft zich die kennis niet te herinneren of zelfs maar te kennen.
 Verschillende delen van een dergelijk programma communiceren met elkaar via interfaces, beperkte sets van functies of bindingen die nuttige functionaliteit bieden op een meer abstract niveau, waardoor hun precieze implementatie wordt verborgen.  
-Interface scheiden van de implementatie wordt meestal __Encpasulation__ genoemd.  
+Interface scheiden van de implementatie wordt meestal __Encapsulation__ genoemd.  
 
 ## Methods
 Methoden zijn niets meer dan eigenschappen die function values bevatten. Een eenvoudige methode is:
-```
+```javascript
 let rabbit = {};
 rabbit.speak = function(line) {
   console.log(`The rabbit says '${line}'`);
@@ -21,7 +21,7 @@ rabbit.speak("I'm alive.");
 Meestal moet een methode iets doen met het object waarop het werd aangeroepen.  
 Wanneer een functie wordt aangeroepen als een methode - opgezocht als een eigenschap en onmiddellijk wordt opgeroepen, zoals in object.method () -   
 verwijst de binding die dit in zijn hoofdtitel heeft aangeroepen automatisch naar het object waarop de functie is aangeroepen.
-```
+```javascript
 function speak(line) {
   console.log(`The ${this.type} rabbit says '${line}'`);
 }
@@ -44,7 +44,7 @@ Javascript-objecten hebben naast hun verzameling eigenschappen ook een prototype
 Een __prototype__ is een ander object dat wordt gebruikt als een terugvalbron van eigenschappen.  
 Wanneer een object een aanvraag ontvangt voor een eigenschap die het niet heeft,  
 wordt er naar het prototype gezocht naar de eigenschap, dan naar het prototype van het prototype, enzovoort.
-```
+```javascript
 console.log(Object.getPrototypeOf(Math.max) ==
             Function.prototype);
 // → true
@@ -53,7 +53,7 @@ console.log(Object.getPrototypeOf([]) ==
 // → true
 ```
 Je kan Object.create gebruiken om een object met een specifiek prototype te maken:
-```
+```javascript
 let protoRabbit = {
   speak(line) {
     console.log(`The ${this.type} rabbit says '${line}'`);
@@ -68,7 +68,7 @@ killerRabbit.speak("SKREEEE!");
 ## Classes
 Een __Class__ definieert de vorm van een type object - welke methoden en eigenschappen het heeft. Zo'n object wordt een instantie van de class genoemd.
 Dus om een exemplaar van een bepaalde class te maken, moet je een object maken dat is afgeleid van het juiste prototype, maar je moet ook zorgen dat het zelf de eigenschappen heeft die instanties van deze class zouden moeten hebben. Dit is wat een __Constructor__ functie doet.
-```
+```javascript
 function makeRabbit(type) {
   let rabbit = Object.create(protoRabbit);
   rabbit.type = type;
@@ -81,7 +81,7 @@ De class keyword start een class decoration, waarmee we een constructor en een s
 Elke methode kan in de accolades van de declaratie worden geschreven.
 Class-declaraties staan ​​momenteel alleen toe dat methoden (eigenschappen die functies bevatten), aan het prototype worden toegevoegd.  
 Net als functies, kan class zowel in statements als in expressions worden gebruikt: 
-```
+```javascript
 let object = new class { getWord() { return "hello"; } };
 console.log(object.getWord());
 // → hello

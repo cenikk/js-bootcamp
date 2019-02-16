@@ -1,7 +1,7 @@
 __Hoofdstuk 5__
 # Higher-Order Functions
 Kijk naar de volgende voorbeelden:  
-```
+```javascript
 let total = 0, count = 1;
 while (count <= 10) {
   total += count;
@@ -10,7 +10,7 @@ while (count <= 10) {
 console.log(total);
 ```
 en
-```
+```javascript
 console.log(sum(range(1, 10)));
 ```
 Welke is waarschijnlijker om een bug te bevatten?
@@ -25,9 +25,9 @@ In de context van programmeren worden dit soort vocabulaires meestal __abstracti
 Abstracties verbergen details en geven ons de mogelijkheid om op een hoger (of abstracter) niveau over problemen te praten.  
 
 ## Higher order Functions 
-Functies die werken op andere functies, ofwel door ze als argumenten te gebruiken of door ze terug te zetten, worden Highter order functions genoemd.  
+Functies die werken op andere functies, ofwel door ze als argumenten te gebruiken of door ze terug te zetten, worden Higher order functions genoemd.  
 Higher order functions stellen ons in staat om acties te abstracten, niet alleen waarden, bijvoorbeed:
-```
+```javascript
 function greaterThan(n) {
   return m => m > n;
 }
@@ -40,7 +40,7 @@ console.log(greaterThan10(11));
 ## Filtering arrays
 Zoals forEach, is filter een standaard array-methode.  
 In plaats van elementen uit de bestaande array te verwijderen, bouwt het een nieuwe array op met alleen de elementen die een test doorstaan.  
-```
+```javascript
 function filter(array, test) {
   let passed = [];
   for (let element of array) {
@@ -59,7 +59,7 @@ console.log(filter(SCRIPTS, script => script.living));
 Een ander veelvoorkomend probleem met arrays is het berekenen van een enkele waarde ervan.  
 De bewerking van de hogere orde , wordt __Reduce__ (soms ook fold genoemd) genoemd.  
 De Reduce parameters zijn (behalve de array): een combinatie-functie en een startwaarde. 
-```
+```javascript
 function reduce(array, combine, start) {
   let current = start;
   for (let element of array) {
