@@ -105,3 +105,8 @@ console.log(false? 1: 2)
 console.log((21 >= 18) ? "Je mag naar binnen" : "Je bent te jong")
 // -> "Je mag naar binnen"
 ```
+
+## Samenvatting
+We hebben in dit hoofdstuk vier typen JavaScript-waarden bekeken: numbers, strings, Booleans en undefined values.
+
+Dergelijke waarden worden gemaakt door hun naam (true, null) of value (13, "abc") in te typen. U kunt waarden combineren en transformeren met operators. We zagen binaire operators voor arithmetic(+, -, *, / en%), string concatenation(+), comparison(==,! =, ===,! ==, <,>, <=,> = ), en logical(&&, ||), en verschillende unary operators (- om een number te ontkennen,! om logical te ontkennen, en typeof om het type van een waarde te vinden) en een ternaire operator (? :) om een van de twee waardes te kiezen op basis van een derde waarde.
